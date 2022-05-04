@@ -3,6 +3,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\cpd3\\OneDrive - DISO - COMERCIO DE ALIMENTOS EIRELI\\Área de Trabalho\\Novo.jks')
+            storePassword 'Neutralizado12'
+            keyAlias 'Novo'
+            keyPassword 'Neutralizado12'
+        }
+    }
     compileSdk 32
 
     defaultConfig {

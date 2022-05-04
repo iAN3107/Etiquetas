@@ -48,6 +48,14 @@
         <Button
             android:layout_width="wrap_content"
             android:text="Imprimir"
+            android:id="@+id/imprimirBoxButton"
+            android:layout_height="wrap_content"></Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="etiquetas"
+            android:id="@+id/etiquetasButton"
+            android:layout_marginVertical="15sp"
             android:layout_height="wrap_content"></Button>
 
     </LinearLayout>

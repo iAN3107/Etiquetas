@@ -3,6 +3,7 @@ package com.cutti.etiquetas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextInputEditText manifesto, codCliente;
     private RadioGroup tipo;
-    private Button botaoImprime;
+    private Button botaoImprime, boxButton;
     private RadioButton tipoSelect;
     private CheckBox doca1, doca2, doca3, doca4;
     private TextView textView;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         manifesto = findViewById(R.id.manifesto);
         codCliente = findViewById(R.id.codCliente);
         tipo = findViewById(R.id.tipo);
+        boxButton = findViewById(R.id.boxButton);
         numeroEtiqueta = findViewById(R.id.numeroEtiqueta);
         botaoImprime = findViewById(R.id.botaoImprime);
 
@@ -79,6 +81,21 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        boxButton.setOnClickListener(new View.OnClickListener()
+             {
+                 @Override
+                 public void onClick(View view) {
+
+                     try {
+                         Intent intent = new Intent(getApplicationContext(), Box.class);
+                         startActivity(intent);
+                     }
+                     catch (Exception e){}
+                 }
+             }
+
+        );
 
         //Executa o imprime para imprimir as etiquetas
 
